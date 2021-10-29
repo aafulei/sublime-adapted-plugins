@@ -11,9 +11,9 @@ class ChangeSelectionEndpointCommand(sublime_plugin.TextCommand):
     """
     order
     -----
-     0      (selection)|  ---> |(selection) ---> (selection)|
-     1      (selection)|
-    -1      |(selection)
+     0   swap                   e.g. (selection)|  ---> |(selection)
+     1   change to (begin, end) e.g. (selection)|
+    -1   change to (end, begin) e.g. |(selection)
     """
     def run(self, edit, order=0):
         new_sel = []

@@ -31,7 +31,22 @@ Adapted from a post on Sublime Forum by Terence Martin (OdatNurd)
 https://forum.sublimetext.com/t/move-caret-to-beginning-or-end-of-selection-without-losing-selection/29329/2
 ```
 
-Swap beginning and ending endpoints for a selection.
+Change beginning and ending points of selections.
+
+#### Arguments
+
+| `order`  | Action                   |
+| -------- | ------------------------ |
+|       0  | swap                     |
+|       1  | change to `(begin, end)` |
+|      -1  | change to `(end, begin)` |
+
+#### Recommended Key Bindings
+
+```json
+{ "keys": ["alt+m"], "command": "change_selection_endpoint" },
+```
+
 
 ### Default Folder for New File
 
