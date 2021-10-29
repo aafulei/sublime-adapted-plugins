@@ -27,7 +27,7 @@ Sublime Text plugins that I adapt for own use.
 ### Change Selection Endpoint
 
 ```
-Adapted from a post on Sublime Forum and a gist by Terence Martin (OdatNurd)
+Adapted from a post on Sublime Forum by Terence Martin (OdatNurd)
 https://forum.sublimetext.com/t/move-caret-to-beginning-or-end-of-selection-without-losing-selection/29329/2
 ```
 

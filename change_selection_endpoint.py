@@ -1,5 +1,5 @@
 # ===== Change Selection Endpoint =============================================
-# Adapted from a post on Sublime Forum and a gist by Terence Martin (OdatNurd)
+# Adapted from a post on Sublime Forum by Terence Martin (OdatNurd)
 # https://forum.sublimetext.com/t/move-caret-to-beginning-or-end-of-selection-without-losing-selection/29329/2
 # =============================================================================
 
@@ -8,9 +8,21 @@ import sublime_plugin
 
 
 class ChangeSelectionEndpointCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    """
+    order
+    -----
+     0      (selection)|  ---> |(selection) ---> (selection)|
+     1      (selection)|
+    -1      |(selection)
+    """
+    def run(self, edit, order=0):
         new_sel = []
         for x in self.view.sel():
-            new_sel.append(sublime.Region(x.b, x.a))
+            if order == 1:
+                new_sel.append(sublime.Region(x.begin(), x.end()))
+            elif order == -1:
+                new_sel.append(sublime.Region(x.end(), x.begin()))
+            else:
+                new_sel.append(sublime.Region(x.b, x.a))
         self.view.sel().clear()
         self.view.sel().add_all(new_sel)
