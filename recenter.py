@@ -29,7 +29,7 @@ class RecenterResetter(sublime_plugin.EventListener):
 
 
 class RecenterCommand(sublime_plugin.TextCommand):
-    def run(self, edit, margin=2):
+    def run(self, edit, margin=4):
         # margin should be > 0
         view = self.view
         pos = next(g_next_pos_gen)
