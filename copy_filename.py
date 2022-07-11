@@ -16,5 +16,5 @@ class CopyFilenameCommand(sublime_plugin.TextCommand):
     def run(self, edit):
         try:
             sublime.set_clipboard(os.path.basename(self.view.file_name()))
-        except AttributeError:
+        except Exception as e:
             pass

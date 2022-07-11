@@ -1,9 +1,9 @@
-# My Adapted Plugins for Sublime Text
+# My Adapted Plugins for Sublime Text 3
 
-Sublime Text plugins that I adapt for own use.
+Sublime Text 3 plugins that I adapt for own use.
 
 1. [Change Selection Endpoint](#change-selection-endpoint) [`.py`](./change_selection_endpoint.py)
-2. [Copy Filename](#copy-filename) [`.py`](./copy-filename.py)
+2. [Copy Filename](#copy-filename) [`.py`](./copy_filename.py)
 3. [Default Folder for New File](#default-folder-for-new-file) [`.py`](./default_folder_for_new_file.py)
 4. [Git Blame Status Bar](#git-blame-status-bar) [`.py`](./git_blame_status_bar.py)
 5. [Goto Last Edit](#goto-last-edit) [`.py`](./goto_last_edit.py)
@@ -45,7 +45,7 @@ Change beginning and ending points of selections.
 #### Recommended Key Bindings
 
 ```json
-{ "keys": ["alt+q"], "command": "change_selection_endpoint" },
+{ "keys": ["alt+s"], "command": "change_selection_endpoint" },
 ```
 
 ### Copy Filename
