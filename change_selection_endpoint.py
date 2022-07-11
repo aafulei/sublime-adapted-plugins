@@ -9,11 +9,14 @@ import sublime_plugin
 
 class ChangeSelectionEndpointCommand(sublime_plugin.TextCommand):
     """
+    Change the selection endpoint.
+
+    -----
     order
     -----
-     0   swap                   e.g. (selection)|  ---> |(selection)
-     1   change to (begin, end) e.g. (selection)|
-    -1   change to (end, begin) e.g. |(selection)
+     0   swap                   e.g. SELECTION| ---> |SELECTION
+     1   change to (begin, end) e.g. SELECTION|
+    -1   change to (end, begin) e.g. |SELECTION
     """
     def run(self, edit, order=0):
         new_sel = []

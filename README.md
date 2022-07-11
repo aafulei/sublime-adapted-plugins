@@ -3,10 +3,11 @@
 Sublime Text plugins that I adapt for own use.
 
 1. [Change Selection Endpoint](#change-selection-endpoint) [`.py`](./change_selection_endpoint.py)
-2. [Default Folder for New File](#default-folder-for-new-file) [`.py`](./default_folder_for_new_file.py)
-3. [Git Blame Status Bar](#git-blame-status-bar) [`.py`](./git_blame_status_bar.py)
-4. [Goto Last Edit](#goto-last-edit) [`.py`](./goto_last_edit.py)
-5. [Recenter](#recenter) [`.py`](./recenter.py)
+2. [Copy Filename](#copy-filename) [`.py`](./copy-filename.py)
+3. [Default Folder for New File](#default-folder-for-new-file) [`.py`](./default_folder_for_new_file.py)
+4. [Git Blame Status Bar](#git-blame-status-bar) [`.py`](./git_blame_status_bar.py)
+5. [Goto Last Edit](#goto-last-edit) [`.py`](./goto_last_edit.py)
+6. [Recenter](#recenter) [`.py`](./recenter.py)
 
 ## Install
 
@@ -44,9 +45,29 @@ Change beginning and ending points of selections.
 #### Recommended Key Bindings
 
 ```json
-{ "keys": ["alt+m"], "command": "change_selection_endpoint" },
+{ "keys": ["alt+q"], "command": "change_selection_endpoint" },
 ```
 
+### Copy Filename
+
+```
+Adapted from a post on Sublime Forum by IGRACH
+https://forum.sublimetext.com/t/file-name-and-full-path-to-clipboard/4833/10
+```
+
+Copy current filename to clipboard.
+
+#### Recommended Key Bindings
+
+```json
+{ "keys": ["primary+k", "primary+i", "primary+n"], "command": "copy_filename" },
+```
+
+By the way, there is a built-in Sublime Text command to copy the file path to the clipboard.
+
+```json
+{ "keys": ["primary+k", "primary+i", "primary+p"], "command": "copy_path" },
+```
 
 ### Default Folder for New File
 
